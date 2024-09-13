@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+body {
+    font-family: "Arial", sans-serif;
+}
 
 .wrapper {
     height: 100vh;
@@ -90,12 +93,12 @@
 .bar-custom {
     height: 10px;
     width: 10px;
-    background-color: #fff;
+    background-color: rgb(76, 62, 155);
     border-radius: 50%;
     transition: .5s;
 }
 .bar-custom:active {
-    background-color: rgb(76, 62, 155);
+    background-color: rgb(134, 51, 69);
 }
 
 @media screen and (max-width: 767px) {
@@ -130,7 +133,7 @@
         margin: 5px;
     }
     .text {
-        margin-top: 15px;
+        margin-top: 10px;
         width: 90vw;
     }
 }
@@ -166,44 +169,44 @@
 /* стилизация кнопок переключения */
 
 #radio_1:checked ~ .navigation > .bar_1 > .bar-custom {
-    border: 2px solid #000;
+    border: 2px solid rgb(76, 62, 155);
     background-color: transparent;
 }
 #radio_1:checked ~ .navigation > .bar_1:hover > .bar-custom {
-    border: 2px solid rgb(247, 226, 134);
+    border: 2px solid rgb(221, 103, 215);
 }
 #radio_1:checked ~ .navigation > .bar_1:active > .bar-custom {
     border: 2px solid rgb(76, 62, 155);
 }
 
 #radio_2:checked ~ .navigation > .bar_2 > .bar-custom {
-    border: 2px solid #000;
+    border: 2px solid rgb(76, 62, 155);
     background-color: transparent;
 }
 #radio_2:checked ~ .navigation > .bar_2:hover > .bar-custom {
-    border: 2px solid rgb(247, 226, 134);
+    border: 2px solid rgb(221, 103, 215);
 }
 #radio_2:checked ~ .navigation > .bar_2:active > .bar-custom {
     border: 2px solid rgb(76, 62, 155);
 }
 
 #radio_3:checked ~ .navigation > .bar_3 > .bar-custom {
-    border: 2px solid #000;
+    border: 2px solid rgb(76, 62, 155);
     background-color: transparent;
 }
 #radio_3:checked ~ .navigation > .bar_3:hover > .bar-custom {
-    border: 2px solid rgb(247, 226, 134);
+    border: 2px solid rgb(221, 103, 215);
 }
 #radio_3:checked ~ .navigation > .bar_3:active > .bar-custom {
     border: 2px solid rgb(76, 62, 155);
 }
 
 #radio_4:checked ~ .navigation > .bar_4 > .bar-custom {
-    border: 2px solid #000;
+    border: 2px solid rgb(76, 62, 155);
     background-color: transparent;
 }
 #radio_4:checked ~ .navigation > .bar_4:hover > .bar-custom {
-    border: 2px solid rgb(247, 226, 134);
+    border: 2px solid rgb(221, 103, 215);
 }
 #radio_4:checked ~ .navigation > .bar_4:active > .bar-custom {
     border: 2px solid rgb(76, 62, 155);
