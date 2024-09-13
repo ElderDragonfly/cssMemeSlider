@@ -59,21 +59,38 @@
 .navigation {
     position: absolute;
     display: flex;
-    bottom: 25px;
+    bottom: 15px;
     right: 0;
-    border: 1px solid rgb(124, 18, 18);
 }
 
 .bar {
-    height: 10px;
-    width: 10px;
-    border: 2px solid rgb(103, 118, 201);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    width: 25px;
     border-radius: 50%;
+    margin: 10px;
+    transition: .5s;
+}
+.bar:hover {
+    cursor: pointer;
+}
+.bar:hover .bar-custom {
+    background-color: rgb(224, 146, 146);
 }
 
-.bar:not(:last-child) {
-    margin-right: 5px;
+.bar-custom {
+    height: 10px;
+    width: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: .5s;
 }
+
+/* .bar:not(:last-child) {
+    margin-right: 5px;
+} */
 
 /* движение слайда */
 #radio_1:checked ~ .slide_1 {
@@ -100,4 +117,38 @@
 }
 #radio_4:checked ~ .subscription > .text_1 {
     margin-left: -75%;
+}
+
+/* стилизация кнопок переключения */
+
+#radio_1:checked ~ .navigation > .bar_1 > .bar-custom {
+    border: 2px solid #000;
+    background-color: transparent;
+}
+#radio_1:checked ~ .navigation > .bar_1:hover > .bar-custom {
+    border: 2px solid rgb(247, 226, 134);
+}
+
+#radio_2:checked ~ .navigation > .bar_2 > .bar-custom {
+    border: 2px solid #000;
+    background-color: transparent;
+}
+#radio_2:checked ~ .navigation > .bar_2:hover > .bar-custom {
+    border: 2px solid rgb(247, 226, 134);
+}
+
+#radio_3:checked ~ .navigation > .bar_3 > .bar-custom {
+    border: 2px solid #000;
+    background-color: transparent;
+}
+#radio_3:checked ~ .navigation > .bar_3:hover > .bar-custom {
+    border: 2px solid rgb(247, 226, 134);
+}
+
+#radio_4:checked ~ .navigation > .bar_4 > .bar-custom {
+    border: 2px solid #000;
+    background-color: transparent;
+}
+#radio_4:checked ~ .navigation > .bar_4:hover > .bar-custom {
+    border: 2px solid rgb(247, 226, 134);
 }
