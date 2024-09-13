@@ -18,8 +18,7 @@
 /* общая оболочка слайдера */
 .slider {
     position: relative;
-    width: 900px;
-    height: 650px;
+    width: 70vw;
     overflow: hidden;
 }
 
@@ -37,30 +36,38 @@
 }
 
 .slide img {
-    width: 900px;
-    height: 600px;
+    width: 100%;
+    height: 85%;
     border-radius: 15px;
 }
 
 /* описание слайдов */
 
 .subscription {
-    display: flex;
+    position: absolute;
+    bottom: 10px;
     width: 400%;
+    height: 25px;
+    display: flex;
+    align-items: center;
 }
 
-.text {
-    height: 50px;
-    width: 900px;
+.text{
+    width: 70vw;
     transition: .8s;
+    margin-left: 0;
+    display: flex;
 }
 
 /* навигация слайдов */
 .navigation {
     position: absolute;
     display: flex;
-    bottom: 15px;
-    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    bottom: 0;
 }
 
 .bar {
@@ -87,10 +94,38 @@
     border-radius: 50%;
     transition: .5s;
 }
+.bar-custom:active {
+    background-color: rgb(76, 62, 155);
+}
 
-/* .bar:not(:last-child) {
-    margin-right: 5px;
-} */
+@media screen and (max-width: 767px) {
+    .slide {
+        margin-bottom: 10px;
+    }
+    .navigation {
+        bottom: 20px;
+        justify-content: center;
+    }
+    .subscription {
+        bottom: 0px;
+    }
+    .text {
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 550px) {
+    .slide {
+        margin-bottom: 20px;
+    }
+    .bar {
+        height: 15px;
+        width: 15px;
+        margin: 5px;
+    }
+    .text {
+        margin-top: 15px;
+    }
+}
 
 /* движение слайда */
 #radio_1:checked ~ .slide_1 {
@@ -106,6 +141,7 @@
     margin-left: -75%;
 }
 
+/* движение подписей */
 #radio_1:checked ~ .subscription > .text_1 {
     margin-left: 0%;
 }
@@ -128,6 +164,9 @@
 #radio_1:checked ~ .navigation > .bar_1:hover > .bar-custom {
     border: 2px solid rgb(247, 226, 134);
 }
+#radio_1:checked ~ .navigation > .bar_1:active > .bar-custom {
+    border: 2px solid rgb(76, 62, 155);
+}
 
 #radio_2:checked ~ .navigation > .bar_2 > .bar-custom {
     border: 2px solid #000;
@@ -135,6 +174,9 @@
 }
 #radio_2:checked ~ .navigation > .bar_2:hover > .bar-custom {
     border: 2px solid rgb(247, 226, 134);
+}
+#radio_2:checked ~ .navigation > .bar_2:active > .bar-custom {
+    border: 2px solid rgb(76, 62, 155);
 }
 
 #radio_3:checked ~ .navigation > .bar_3 > .bar-custom {
@@ -144,6 +186,9 @@
 #radio_3:checked ~ .navigation > .bar_3:hover > .bar-custom {
     border: 2px solid rgb(247, 226, 134);
 }
+#radio_3:checked ~ .navigation > .bar_3:active > .bar-custom {
+    border: 2px solid rgb(76, 62, 155);
+}
 
 #radio_4:checked ~ .navigation > .bar_4 > .bar-custom {
     border: 2px solid #000;
@@ -151,4 +196,7 @@
 }
 #radio_4:checked ~ .navigation > .bar_4:hover > .bar-custom {
     border: 2px solid rgb(247, 226, 134);
+}
+#radio_4:checked ~ .navigation > .bar_4:active > .bar-custom {
+    border: 2px solid rgb(76, 62, 155);
 }
